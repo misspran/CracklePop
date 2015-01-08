@@ -9,19 +9,36 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property int number;
+
 
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self crackleAndPop: _number];
+
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSString *)crackleAndPop: (int) integer {
+    int i = 9;
+    
+    for (i = 1; i<=100; i++){
+        
+        if (i%3 ==0 && i%5==0) {
+            NSLog(@"CracklePop");
+        } else if (i % 3 == 0) {
+            NSLog(@"Crackle");
+        } else if (i % 5 == 0) {
+            NSLog(@"Pop");
+        } else {
+            NSLog(@"%i", i);
+        }
+        
+    }
+    return @"";
 }
 
 @end
